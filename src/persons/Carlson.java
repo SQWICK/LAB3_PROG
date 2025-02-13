@@ -22,7 +22,6 @@ public class Carlson extends Person implements Argueable {
     }
 
     private Mood mood;
-    private boolean peachJuice;
     private boolean eyes;
 
     public Carlson(Mood mood, boolean eyes, String name, int age) {
@@ -41,21 +40,12 @@ public class Carlson extends Person implements Argueable {
         this.mood = mood;
     }
 
-
     public void makeSoud(Sounds sound){
         System.out.println(name + " издал звук:" + sound.getName());
     }
 
     public void chooseJuice(Juice juice){
         System.out.println(juice.getJuice() + "cтекал у " + name);
-    }
-
-    public boolean isEyes() {
-        return eyes;
-    }
-
-    public void setEyes(boolean eyes) {
-        this.eyes = eyes;
     }
 
     public void extendHand(String personName) {
@@ -92,7 +82,6 @@ public class Carlson extends Person implements Argueable {
     public void argue(Mood mood, Person opponent) {
         System.out.println(name + " " + mood.getName() + " спорит с " + opponent);
     }
-
 
     @Override
     public String toString() {
